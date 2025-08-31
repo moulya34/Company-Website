@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color:black;
+    color: black;
+    background-image: url(img/b1.png);
+    background-size: cover;
+    background-position:  center;
+}
+nav{
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 0;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 80px;
+}
+nav ul li a{
+    text-decoration: black;
+    color: black;
+    font-size: 17px;
+}
+.box{
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items:center;
+    box-shadow: 0 10px 25px rgba(12,3,51,0.3);
+}
+.box:hover input{
+    width: 400px;
+}
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 800;
+    transition: 0.8s;
+    background: transparent;
+}
+.box a .fas{
+    color: antiquewhite;
+    font-size: 18px;
+}
+.about {
+    text-align: center;
+
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container1{
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+.card{
+    width: 80px;
+    border-radius: 75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px whitesmoke ;
+}
+.card>.row{
+    color: black;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.card > .row > .icon{
+    background: white;
+    color: black;
+   border-radius:50%;
+   width: 50px;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin:15px ;
+}
+.card > .row > .description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 240px;
+    width: 600px;
+    opacity: 0;
+    transform: translate(30px);
+    transition-delay: 3s;
+    transition: all .3s ease;
+}
+.description p{
+    columns: #b0b0b0;
+    padding-top: -5%;
+    text-align: center;
+}
+.description h4{
+    text-transform: uppercase;
+    text-align: center;
+
+}
+input{
+    display: none;
+}
+input:checked + label{
+    width: 800px;
+    height: 70%;
+   
+   
+}
+input:checked + label .description{
+    opacity: 1 !important;
+    transform: translate(0) !important;
+}
+.card[for="c1"] {
+    background-image: url("./img/a1.jpeg");
+}
